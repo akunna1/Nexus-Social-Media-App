@@ -2,7 +2,10 @@
 
 main color: #034a9c
 
-Progress notes:
+###### Resources
+- for icons: https://icons8.com/icons
+
+#### Progress notes:
 - Navbar (semicomplete --> need to add burger menu)
 
 previous colors: style={{ backgroundColor: '#132235'}}
