@@ -5,9 +5,6 @@ main color: #034a9c
 ###### Resources
 - for icons: https://icons8.com/icons
 
-#### Progress notes:
-- Navbar (semicomplete --> need to add burger menu)
-- Leftbar --> not mobile responsive
 
 Current colors:
 - blue: bg-[#034a9c]  hover:bg-[#022f73]
