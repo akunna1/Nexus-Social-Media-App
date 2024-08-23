@@ -17,16 +17,17 @@ function App() {
   const Layout = () => {
     return (
       <div>
-        <Navbar />
+        <Navbar /> {/* Displays the navigation bar at the top */}
 
+        {/* Container for the main content, divided into three columns */}
         <div className="flex">
-          <div className="w-1/6"> {/* 0.166% width for Leftbar */}
+          <div className="w-1/6"> {/* Leftbar takes up 16.67% of the width */}
             <Leftbar />
           </div>
-          <div className="w-3/6"> {/* 50% width for Home */}
-            <Outlet /> {/* Outlet for rendering child routes */}
+          <div className="w-3/6"> {/* Main content (e.g., Home or Profile) takes up 50% of the width */}
+            <Outlet /> {/* Renders the child route components like Home or Profile */}
           </div>
-          <div className="w-2/6"> {/* 33.33% width for Rightbar */}
+          <div className="w-2/6"> {/* Rightbar takes up 33.33% of the width */}
             <Rightbar />
           </div>
         </div>
@@ -34,25 +35,25 @@ function App() {
     );
   };
 
-  // ProtectedRoute function to guard routes that require authentication
+  // ProtectedRoute function guards routes that require authentication
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
-      return <Navigate to="/login" />;
+      return <Navigate to="/login" />; // Redirects to login if the user is not authenticated
     }
 
-    return children;
+    return children; // Renders the protected content if authenticated
   };
 
   return (
     <>
-      {/* The homepage should have the navbar, leftbar, profile, and rightbar */}
+      {/* Defining the routes for the app */}
       <Routes>
         <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
-          <Route index element={<Home />} /> {/* Home page as a child of Layout */}
+          <Route index element={<Home />} /> {/* Home page as the default child of Layout */}
           <Route path="profile/:id" element={<Profile />} /> {/* Profile page as a child of Layout */}
         </Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} /> {/* Login page route */}
+        <Route path="/register" element={<Register />} /> {/* Register page route */}
       </Routes>
     </>
   );
