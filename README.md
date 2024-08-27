@@ -9,8 +9,8 @@ main color: #034a9c
 ##### Mobile Responsiveness
 - Right bar: available only on medium and large screens
 - Navbar2: available on medium and small screens (burger menu, home, moon, grid, user image, user name)
-- Navbar: full navbar on large scrrens, miniumized on medium and small screens
-- Left bar: shown on large screens of the left, but on medium and small screens, it is accessible from the burger menu in Navbar2
+- Navbar: full navbar on large scrrens, minimized on medium and small screens
+- Left bar: shown on large screens on the left, but on medium and small screens, it is accessible from the burger menu in Navbar2
 
 
 Current colors:
