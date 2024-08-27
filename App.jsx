@@ -8,6 +8,7 @@ import Profile from './pages/Profile';
 import Navbar from './components/Navbar';
 import Rightbar from './components/Rightbar';
 import Leftbar from './components/Leftbar';
+import Navbar2 from './components/Navbar2'; // The second navbar for small and medium screens
 
 function App() {
 
@@ -18,19 +19,27 @@ function App() {
     return (
       <div>
         <Navbar /> {/* Displays the navigation bar at the top */}
-
-        {/* Container for the main content, divided into three columns */}
-        <div className="flex">
-          <div className="w-1/6"> {/* Leftbar takes up 16.67% of the width */}
+        
+        {/* Container for the main content */}
+        <div className="flex mb-20 lg:mb-0">
+          {/* Leftbar hidden on small/medium screens */}
+          <div className="hidden lg:block w-1/6"> 
             <Leftbar />
           </div>
-          <div className="w-3/6"> {/* Main content (e.g., Home or Profile) takes up 50% of the width */}
+
+          {/* Main content with dynamic width based on screen size */}
+          <div className="w-full md:w-3/5 lg:w-3/6"> 
             <Outlet /> {/* Renders the child route components like Home or Profile */}
           </div>
-          <div className="w-2/6"> {/* Rightbar takes up 33.33% of the width */}
+
+          {/* Rightbar hidden on small screens, visible on medium and large screens */}
+          <div className="hidden md:block md:w-2/5 lg:w-2/6"> 
             <Rightbar />
           </div>
         </div>
+
+        <Navbar2 /> {/* Displays the second navbar for small/medium screens */}
+
       </div>
     );
   };
