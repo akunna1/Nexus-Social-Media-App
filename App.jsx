@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import Rightbar from './components/Rightbar';
 import Leftbar from './components/Leftbar';
 import Navbar2 from './components/Navbar2'; // The second navbar for small and medium screens
+import ScrollToTop from './components/scroll';
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
   return (
     <>
       {/* Defining the routes for the app */}
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
           <Route index element={<Home />} /> {/* Home page as the default child of Layout */}
