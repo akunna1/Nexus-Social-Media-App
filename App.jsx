@@ -59,12 +59,14 @@ function App() {
       {/* Defining the routes for the app */}
       <ScrollToTop />
       <Routes>
+        {/* Rendering Home and Profile (child elements) into Outlet, components --> Outlet --> Layout*/}
         <Route path="/" element={<ProtectedRoute><Layout /></ProtectedRoute>}>
-          <Route index element={<Home />} /> {/* Home page as the default child of Layout */}
-          <Route path="profile/:id" element={<Profile />} /> {/* Profile page as a child of Layout */}
+          <Route index element={<Home />} /> {/* Default child */}
+          <Route path="profile/:id" element={<Profile />} />
         </Route>
-        <Route path="/login" element={<Login />} /> {/* Login page route */}
-        <Route path="/register" element={<Register />} /> {/* Register page route */}
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   );
