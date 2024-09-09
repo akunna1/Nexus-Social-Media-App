@@ -25,6 +25,8 @@ const Profile = () => {
             <p className="text-left text-sm"><span className='font-extrabold'>Age:</span> 43</p>
             <p className="text-left text-sm"><span className='font-extrabold'>Location:</span> Tampa, Florida</p>
           </div>
+
+          {/* Placeholder: Who are you? Why are you here? */}
           <span className="block mt-6 ">
             I am a recovering alcoholic, struggling with PTSD. I'm here to find some support resources.
           </span>
