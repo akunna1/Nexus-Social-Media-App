@@ -1,3 +1,5 @@
+#### Complete code not provided (i.e components omitted)...
+
 ## Frontend structure featuring some codes
 
 ##### For icons
