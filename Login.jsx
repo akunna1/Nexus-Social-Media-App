@@ -51,7 +51,7 @@ const Login = () => {
           <p className="text-[#2d2d2d] text-lg mb-4 text-left">Is therapy too expensive? Discover insights from others' therapy sessions. Join Nexus, the social media app dedicated to sharing therapy resources at no cost.</p>
 
           <p className="text-[#2d2d2d] text-sm mb-2 mt-5">Don't have an account?</p>
-          <Link to='/register'>
+          <Link to='/'>
             <button className="w-full bg-gray-700 hover:bg-gray-800 text-white py-2 px-4 rounded-xl font-semibold shadow-xl">Register</button>
           </Link>
         </div>
