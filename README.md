@@ -1,6 +1,6 @@
 # Nexus App — Legacy Frontend
 
-#### Complete code not provided (i.e., components omitted)...
+#### Complete code not provided...
 
 ---
 
